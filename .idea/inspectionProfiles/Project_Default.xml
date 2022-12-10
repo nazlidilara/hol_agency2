@@ -1,0 +1,20 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="false" level="WARNING" enabled_by_default="false">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="acente.urls.include" />
+          <option value="acente.urls.admin" />
+          <option value="acente.urls.path" />
+          <option value="home.views.*" />
+          <option value="acente2.urls.django" />
+          <option value="acente2.wsgi.django" />
+          <option value="acente2.asgi.*" />
+          <option value="acente.urls.django" />
+          <option value="home.urls.django" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
