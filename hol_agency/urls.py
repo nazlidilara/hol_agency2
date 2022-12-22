@@ -20,14 +20,20 @@ from django.conf import settings
 from home.views import index
 from django.contrib import admin
 from django.urls import include, path
-
+from home import views
 urlpatterns = [
     path('',include('home.urls')),
-    path('home/', include('home.urls')),
+    path('home/',include('home.urls')),
     path('product/',include('product.urls')),
-    path('admin/', admin.site.urls),
-    path(' ',index,name='index'),
-]
+    path('admin/',admin.site.urls),
+    path('category/<int:id>/<slug:slug>',views.category_products,name='category_products'),
+    path('product/<int:id>/<slug:slug>',views.product_detail,name='product_detail'),
+    #path('product/addcomment/<int:id>', views.addcomment, name='addcomment')
+    path('login/',views.login_view,name='login_view'),
+    path('logout/',views.logout_view,name='logout_view'),
+    path('user/',include('user.urls')),
+    ]
 
-urlpatterns +=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
-urlpatterns +=static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
+if settings.DEBUG:
+    urlpatterns +=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+    urlpatterns +=static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
