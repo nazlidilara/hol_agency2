@@ -13,15 +13,11 @@ class ProductImageInline(admin.TabularInline):
     extra = 5
 
 class productAdmin(admin.ModelAdmin):
-    list_display = ['title', 'image_tag']
-    readonly_fields = ('image_tag',)
+    list_display = ['id','title', 'category','price']
+
     inlines = [ProductImageInline]
     prepopulated_fields = {'slug': ('title',)}
 
-
-
-class imagesAdmin(admin.ModelAdmin):
-    list_display = ['title','product','images']
 
 
 
@@ -30,5 +26,5 @@ class imagesAdmin(admin.ModelAdmin):
 # Register your models here.
 admin.site.register(Category, categoryAdmin)
 admin.site.register(Product,productAdmin)
-admin.site.register(Images,imagesAdmin)
+
 admin.site.register(Comment)

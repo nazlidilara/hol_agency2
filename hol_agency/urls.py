@@ -17,10 +17,11 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
-from home.views import index
+from home.views import index_request
 from django.contrib import admin
 from django.urls import include, path
 from home import views
+from django.conf.urls.static import static
 urlpatterns = [
     path('',include('home.urls')),
     path('home/',include('home.urls')),

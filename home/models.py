@@ -26,13 +26,15 @@ class Setting(models.Model):
     facebook = models.CharField(blank=True, max_length=50)
     instagram = models.CharField(blank=True, max_length=50)
     twitter = models.CharField(blank=True, max_length=50)
-    aboutus = models.CharField(max_length=50)
+    aboutus = models.TextField(max_length=50)
     contact = models.CharField(max_length=50)
     contact_map = models.CharField(max_length=50)
-    references = models.CharField(max_length=50)
+    references = models.TextField(max_length=50)
     status = models.CharField(max_length=10, choices=STATUS)
     create_at = models.DateTimeField(auto_now_add=True)
     uptade_at = models.DateTimeField(auto_now=True)
+    price=models.FloatField()
+    image=models.ImageField(blank=True,upload_to='images/')
 
     def __str__(self):
         return self.title
@@ -58,3 +60,16 @@ class UserProfileForm(ModelForm):
     class Meta:
         model = UserProfile
         fields = ['phone', 'address', 'city', 'country', 'image']
+
+
+class  Products(models.Model):
+    title = models.CharField(max_length=200)
+
+
+class Images(models.Model):
+    product=models.ForeignKey(Products,on_delete=models.CASCADE)
+    title=models.CharField(max_length=50)
+    image=models.ImageField(blank=True,upload_to='images/')
+
+
+

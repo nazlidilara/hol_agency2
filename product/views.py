@@ -8,8 +8,7 @@ from product.models import CommentForm, Comment
 
 
 # Create your views here.
-def index(request):
-    return HttpResponse("Merhaba Alt Uygulama")
+
 
 
 @login_required(login_url='/login')
@@ -32,3 +31,7 @@ def addcomment(request, id):
     messages.error(request, "Kaydedilme işlemi gerçekleştirilemedi. Lütfen kontrol ediniz.")
     return HttpResponseRedirect(url)
     #return HttpResponse("Kaydedilme işlemi gerçekleştirilemedi.")
+
+def dilara(reques):
+
+    return render(request,"odalar.html")

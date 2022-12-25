@@ -9,22 +9,22 @@ from product.models import Category, Product, Images, Comment
 
 # Create your views here.
 
-def index(request):
-    category = Category.objects.all()
+def index_request(request):
+    '''category = Category.objects.all()
     dayproducts = Product.objects.all()[:4]
     lastproducts = Product.objects.all().order_by('-id')[0:4]
     randomproducts =Product.objects.all().order_by('?')[0:4]
     context = {'category': category,
                'dayproducts': dayproducts,
                'lastproducts': lastproducts,
-               'randomproducts': randomproducts}
-    return render(request, 'index.html', context)
+               'randomproducts': randomproducts}'''
+    return render(request, 'index.html')
 
 
 def category_products(request, id, slug):
     category = Category.objects.all()
     selectedCategory = Category.objects.filter(pk=id)
-    product = Product.objects.filter(category_id=id)
+    product = Product.objects.filter(category_id=id,slug=slug)
     context = {'selectedCategory': selectedCategory,
                'products': product,
                'category':category}
@@ -61,3 +61,10 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     return HttpResponseRedirect('/')
+
+
+
+def about_request(request):
+
+    #bu kısıma istediğin foknsiyonu veya db yi koyarsın......
+    return render(request,"about.html")

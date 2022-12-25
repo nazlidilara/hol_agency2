@@ -24,7 +24,7 @@ class Category(models.Model):
     update_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.title
+        return self.slug
 
     def get_absolute_url(self):
         return reverse('category_products', kwargs={'slug': self.slug})
@@ -38,7 +38,6 @@ class Product(models.Model):
     title = models.CharField(max_length=50)
     description = models.CharField(blank=True, max_length=300)
     keywords = models.CharField(blank=True, max_length=200)
-    image = models.ImageField(blank=True, upload_to='images/', null=True)
     price = models.FloatField()
     amount = models.IntegerField()
     detail = models.TextField()
@@ -54,13 +53,12 @@ class Product(models.Model):
     def __str__(self):
         return self.title
 
-    def image_tag(self):
-        return mark_safe('<img src="{}" height="50"/>'.format(self.image.url))
 
-    image_tag.short_description = 'Image'
+
+
 
 class Images(models.Model):
-    title = models.CharField(max_length=50)
+    title = models.CharField(max_length=50,blank=True)
     product = models.ForeignKey(Product,on_delete=models.CASCADE)
     images = models.ImageField(blank=True, upload_to='images/')
 
