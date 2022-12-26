@@ -1,5 +1,10 @@
 {% extends 'homebase.html' %}
-{% block title %} index{% endblock %}
+{% block title %} {{ setting.title }} seyahat acentesi  {% endblock %}
+{% block keywords %} {{ setting.keywords }}  {% endblock %}
+{% block description %} {{ setting.description }}  {% endblock %}
+ {% block head %}
+      <link  rel="icon" type= 'image/x-icon' href='{{ setting.icon.url }}' />
+ {% endblock %}
 {% block css_files %}  {% endblock %}
 {% load static %}
 {%block content%}
@@ -711,10 +716,9 @@
                 <p>30 yillik tecrubenin verdigi guvenle...</p>
                 <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Bizi takip edin</h6>
                 <div class="d-flex justify-content-start">
-                    <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/dilaraaksoy08 "class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://tr-tr.facebook.com/ "class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/dilara.akksoy/ " class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
@@ -724,9 +728,8 @@
                     <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Hedefler</a>
                     <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Services</a>
                     <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Packages</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Guides</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Testimonial</a>
-                    <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Blog</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>SIKÇA SORULAN SORULAR</a>
+
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
@@ -737,7 +740,6 @@
                     <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Services</a>
                     <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Packages</a>
                     <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Guides</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Testimonial</a>
                     <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Blog</a>
                 </div>
             </div>

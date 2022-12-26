@@ -2,8 +2,8 @@ from django.contrib.auth.models import User
 from django.db import models
 from django.forms import ModelForm
 from django.utils.safestring import mark_safe
-
-
+from django.db.models import ForeignKey
+from django.urls import reverse
 # Create your models here.
 class Setting(models.Model):
     STATUS = (
@@ -26,7 +26,7 @@ class Setting(models.Model):
     facebook = models.CharField(blank=True, max_length=50)
     instagram = models.CharField(blank=True, max_length=50)
     twitter = models.CharField(blank=True, max_length=50)
-    aboutus = models.TextField(max_length=50)
+    aboutus = models.TextField(max_length=5050)
     contact = models.CharField(max_length=50)
     contact_map = models.CharField(max_length=50)
     references = models.TextField(max_length=50)
@@ -63,8 +63,16 @@ class UserProfileForm(ModelForm):
 
 
 class  Products(models.Model):
-    title = models.CharField(max_length=200)
 
+    category = models.CharField(max_length=200,blank=True)
+    title = models.CharField(max_length=150)
+    keywords = models.CharField(max_length=255,blank=True)
+    description = models.CharField(max_length=255,blank=True)
+    price= models.FloatField(null=True)
+    image = models.ImageField(blank=True,upload_to="images/")
+    detail = models.TextField(blank=True)
+    create_at = models.DateTimeField(auto_now_add=True,null=True)
+    uptade_at = models.DateTimeField(auto_now=True,null=True)
 
 class Images(models.Model):
     product=models.ForeignKey(Products,on_delete=models.CASCADE)

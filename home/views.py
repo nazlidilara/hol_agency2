@@ -10,14 +10,16 @@ from product.models import Category, Product, Images, Comment
 # Create your views here.
 
 def index_request(request):
-    '''category = Category.objects.all()
+    settingico = Setting.objects.all()
+    setting=Setting.objects.get(pk=1)
+    category = Category.objects.all()
     dayproducts = Product.objects.all()[:4]
     lastproducts = Product.objects.all().order_by('-id')[0:4]
     randomproducts =Product.objects.all().order_by('?')[0:4]
     context = {'category': category,
                'dayproducts': dayproducts,
                'lastproducts': lastproducts,
-               'randomproducts': randomproducts}'''
+               'randomproducts': randomproducts}
     return render(request, 'index.html')
 
 
@@ -65,6 +67,11 @@ def logout_view(request):
 
 
 def about_request(request):
-
-    #bu kısıma istediğin foknsiyonu veya db yi koyarsın......
+    setting=Setting.objects.get(pk=1)
+    context={'setting':setting}
     return render(request,"about.html")
+
+def blog_request(request):
+    return render(request,"blog.html")
+def contact_request(request):
+    return render(request,"contact.html")

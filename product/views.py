@@ -32,6 +32,4 @@ def addcomment(request, id):
     return HttpResponseRedirect(url)
     #return HttpResponse("Kaydedilme işlemi gerçekleştirilemedi.")
 
-def dilara(reques):
 
-    return render(request,"odalar.html")
