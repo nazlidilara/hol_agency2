@@ -3,7 +3,7 @@ from django.core.checks import messages
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 
-from home.models import Setting, UserProfile
+from home.models import Setting, UserProfile,ContactFormMessage
 from product.models import Category, Product, Images, Comment
 
 
@@ -73,5 +73,12 @@ def about_request(request):
 
 def blog_request(request):
     return render(request,"blog.html")
-def contact_request(request):
-    return render(request,"contact.html")
+
+def contact_view(request):
+    return render(request,'contact.html')
+
+def destination_request(request):
+    return render(request,"destination.html")
+
+def service_request(request):
+    return render(request,"service.html")

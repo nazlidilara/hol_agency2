@@ -81,3 +81,19 @@ class Images(models.Model):
 
 
 
+class ContactFormMessage(models.Model):
+    STATUS = (
+        ('new','new'),
+        ('read','read'),
+    )
+    name = models.CharField(blank=True, max_length=25)
+    email = models.CharField(blank=True, max_length=50)
+    subject = models.CharField(blank=True, max_length=150)
+    message = models.CharField(blank=True, max_length=250)
+    ip= models.CharField(blank=True, max_length=50)
+    note = models.CharField(blank=True,max_length=100)
+    create_at = models.DateTimeField(auto_now_add=True)
+    uptade_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.name
