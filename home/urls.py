@@ -7,7 +7,9 @@ urlpatterns = (
     path('home',views.index_request,name="home"),
     path('about',views.about_request,name="about"),
     path('blog',views.blog_request,name="blog"),
-    path('contact/',views.contact_view,name='contact'),
+    path('blogdetail',views.blog_request,name="blogdetail"),
+    path('contact/',views.contact,name='contact'),
     path('destination/',views.destination_request,name='destination'),
     path('service/',views.service_request,name='service'),
+
 )

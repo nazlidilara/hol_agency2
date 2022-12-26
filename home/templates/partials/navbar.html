@@ -10,10 +10,10 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
                     <div class="navbar-nav ml-auto py-0">
-                        <a href=""class="nav-item nav-link active">Home</a>
+                        <a href="{% url 'home' %}"class="nav-item nav-link active">Home</a>
                         <a href="{% url 'about' %}" href="/hakkimizda" class="nav-item nav-link">Hakkimizda</a>
                         <a href="{% url 'service' %}" class="nav-item nav-link">Servislerimiz</a>
-                        <a href="package.html" class="nav-item nav-link">Tur Paketleri</a>
+
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Sayfalar</a>
                             <div class="dropdown-menu border-0 rounded-0 m-0">
@@ -24,6 +24,9 @@
                             </div>
                         </div>
                         <a href="{% url 'contact' %} " class="nav-item nav-link">Iletisim</a>
+                         <a href="{% url 'login_request' %}" class="nav-item nav-link"> Giriş</a>
+                        <a href="{% url 'register' %}" class="nav-item nav-link"> Kayıt Ol</a>
+                           <a href="{% url 'logout' %}" class="nav-item nav-link"> Çıkış</a>
                     </div>
                 </div>
             </nav>

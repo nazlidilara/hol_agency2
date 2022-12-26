@@ -6,31 +6,32 @@
 {%block content%}
 <body>
     <!-- Topbar Start -->
-    <div class="container-fluid bg-light pt-3 d-none d-lg-block">
+   {  <div class="container-fluid bg-light pt-3 d-none d-lg-block">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
                     <div class="d-inline-flex align-items-center">
-                        <p><i class="fa fa-envelope mr-2"></i>dilaraaksoy@hotmail.com</p>
+                        <p><i class="fa fa-envelope mr-2"></i>dilaraaksoy6@hotmail.com</p>
                         <p class="text-body px-3">|</p>
-                        <p><i class="fa fa-phone-alt mr-2"></i>+012 345 6789</p>
+                        <p><i class="fa fa-phone-alt mr-2"></i>0850 633 3 6339</p>
                     </div>
                 </div>
                 <div class="col-lg-6 text-center text-lg-right">
                     <div class="d-inline-flex align-items-center">
-                        <a class="text-primary px-3" href="">
-                            <i class="fab fa-facebook-f"></i>
+                        <a href="https://tr-tr.facebook.com/"class="text-primary px-3" href="">
+                            <i  class="fab fa-facebook-f"></i>
                         </a>
-                        <a class="text-primary px-3" href="">
+
+                        <a  href= "https://twitter.com/dilaraaksoy08"class="text-primary px-3" href="">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a class="text-primary px-3" href="">
+                        <a href= " https://tr.linkedin.com/"class="text-primary px-3" href="">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a class="text-primary px-3" href="">
+                        <a href="https://www.instagram.com/dilara.akksoy/"class="text-primary px-3" href="">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a class="text-primary pl-3" href="">
+                        <a href="https://www.youtube.com/results?search_query=holiday"class="text-primary pl-3" href="">
                             <i class="fab fa-youtube"></i>
                         </a>
                     </div>
@@ -50,11 +51,11 @@
     <div class="container-fluid page-header">
         <div class="container">
             <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-                <h3 class="display-4 text-white text-uppercase">Blog</h3>
+                <h3 class="display-4 text-white text-uppercase">blog</h3>
                 <div class="d-inline-flex text-white">
                     <p class="m-0 text-uppercase"><a class="text-white" href="{% url 'home' %}">Home</a></p>
                     <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                    <p class="m-0 text-uppercase">Blog</p>
+                    <p class="m-0 text-uppercase">blog</p>
                 </div>
             </div>
         </div>
@@ -62,70 +63,20 @@
     <!-- Header End -->
 
 
-    <!-- Booking Start -->
-    <div class="container-fluid booking mt-5 pb-5">
-        <div class="container pb-5">
-            <div class="bg-light shadow" style="padding: 30px;">
-                <div class="row align-items-center" style="min-height: 60px;">
-                    <div class="col-md-10">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="mb-3 mb-md-0">
-                                    <select class="custom-select px-4" style="height: 47px;">
-                                        <option selected>Destination</option>
-                                        <option value="1">Destination 1</option>
-                                        <option value="2">Destination 1</option>
-                                        <option value="3">Destination 1</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="mb-3 mb-md-0">
-                                    <div class="date" id="date1" data-target-input="nearest">
-                                        <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Depart Date" data-target="#date1" data-toggle="datetimepicker"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="mb-3 mb-md-0">
-                                    <div class="date" id="date2" data-target-input="nearest">
-                                        <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Return Date" data-target="#date2" data-toggle="datetimepicker"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="mb-3 mb-md-0">
-                                    <select class="custom-select px-4" style="height: 47px;">
-                                        <option selected>Duration</option>
-                                        <option value="1">Duration 1</option>
-                                        <option value="2">Duration 1</option>
-                                        <option value="3">Duration 1</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <button class="btn btn-primary btn-block" type="submit" style="height: 47px; margin-top: -2px;">Submit</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Booking End -->
 
 
-    <!-- Blog Start -->
+
+    <!-- assets/img/blog Start -->
     <div class="container-fluid py-5">
         <div class="container py-5">
             <div class="row">
                 <div class="col-lg-8">
                     <div class="row pb-3">
                         <div class="col-md-6 mb-4 pb-2">
-                            <div class="blog-item">
+                            <div class="assets/img/blog-item">
                                 <div class="position-relative">
-                                    <img class="img-fluid w-100" src="{%static '/blog-1.jpg'%}" alt="">
-                                    <div class="blog-date">
+                                    <img class="img-fluid w-100" src="{% static '/assets/img/blog-1.jpg' %}" alt="">
+                                    <div class="assets/img/blog-date">
                                         <h6 class="font-weight-bold mb-n1">01</h6>
                                         <small class="text-white text-uppercase">Jan</small>
                                     </div>
@@ -141,10 +92,10 @@
                             </div>
                         </div>
                         <div class="col-md-6 mb-4 pb-2">
-                            <div class="blog-item">
+                            <div class="assets/img/blog-item">
                                 <div class="position-relative">
-                                    <img class="img-fluid w-100" src="{%static '/blog-2.jpg'%}" alt="">
-                                    <div class="blog-date">
+                                    <img class="img-fluid w-100" src="{% static '/assets/img/blog-2.jpg' %}" alt="">
+                                    <div class="assets/img/blog-date">
                                         <h6 class="font-weight-bold mb-n1">01</h6>
                                         <small class="text-white text-uppercase">Jan</small>
                                     </div>
@@ -160,10 +111,10 @@
                             </div>
                         </div>
                         <div class="col-md-6 mb-4 pb-2">
-                            <div class="blog-item">
+                            <div class="assets/img/blog-item">
                                 <div class="position-relative">
-                                    <img class="img-fluid w-100" src="{%static '/blog-3.jpg'%}" alt="">
-                                    <div class="blog-date">
+                                    <img class="img-fluid w-100" src="{% static 'assets/img/assets/img/blog-3.jpg'%}" alt="">
+                                    <div class="assets/img/blog-date">
                                         <h6 class="font-weight-bold mb-n1">01</h6>
                                         <small class="text-white text-uppercase">Jan</small>
                                     </div>
@@ -179,10 +130,29 @@
                             </div>
                         </div>
                         <div class="col-md-6 mb-4 pb-2">
-                            <div class="blog-item">
+                            <div class="assets/img/blog-item">
                                 <div class="position-relative">
-                                    <img class="img-fluid w-100" src="{%static '/blog-1.jp'%}'" alt="">
-                                    <div class="blog-date">
+                                    <img class="img-fluid w-100" src="{%static '/assets/img/blog-1.jp'%}'" alt="">
+                                    <div class="assets/img/blog-date">
+                                        <h6 class="font-weight-bold mb-n1">01</h6>
+                                        <small class="text-white text-uppercase">Jan</small>
+                                    </div>
+                                </div>
+                                <div class="bg-white p-4">
+                                    <div class="d-flex mb-2">
+                                        <a class="text-primary text-uppercase text-decoration-none" href="">Admin</a>
+                                        <span class="text-primary px-2">|</span>
+                                        <a class="text-primary text-uppercase text-decoration-none" href="">Tours & Travel</a>
+                                    </div>
+                                    <a class="h5 m-0 text-decoration-none" href=""> </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4 pb-2">
+                            <div class="assets/img/blog-item">
+                                <div class="position-relative">
+                                    <img class="img-fluid w-100" src="{% static '/assets/img/blog-2.jpg'%}" alt="">
+                                    <div class="assets/img/blog-date">
                                         <h6 class="font-weight-bold mb-n1">01</h6>
                                         <small class="text-white text-uppercase">Jan</small>
                                     </div>
@@ -198,10 +168,10 @@
                             </div>
                         </div>
                         <div class="col-md-6 mb-4 pb-2">
-                            <div class="blog-item">
+                            <div class="assets/img/blog-item">
                                 <div class="position-relative">
-                                    <img class="img-fluid w-100" src="{% static '/blog-2.jpg'%}" alt="">
-                                    <div class="blog-date">
+                                    <img class="img-fluid w-100" src="{% static '/assets/img/blog-3.jpg'%}" alt="">
+                                    <div class="assets/img/blog-date">
                                         <h6 class="font-weight-bold mb-n1">01</h6>
                                         <small class="text-white text-uppercase">Jan</small>
                                     </div>
@@ -217,10 +187,10 @@
                             </div>
                         </div>
                         <div class="col-md-6 mb-4 pb-2">
-                            <div class="blog-item">
+                            <div class="assets/img/blog-item">
                                 <div class="position-relative">
-                                    <img class="img-fluid w-100" src="{% static '/blog-3.jpg'%}" alt="">
-                                    <div class="blog-date">
+                                    <img class="img-fluid w-100" src="{% static '/assets/img/blog-1.jpg'%}" alt="">
+                                    <div class="assets/img/blog-date">
                                         <h6 class="font-weight-bold mb-n1">01</h6>
                                         <small class="text-white text-uppercase">Jan</small>
                                     </div>
@@ -236,29 +206,10 @@
                             </div>
                         </div>
                         <div class="col-md-6 mb-4 pb-2">
-                            <div class="blog-item">
+                            <div class="assets/img/blog-item">
                                 <div class="position-relative">
-                                    <img class="img-fluid w-100" src="{% static '/blog-1.jpg'%}" alt="">
-                                    <div class="blog-date">
-                                        <h6 class="font-weight-bold mb-n1">01</h6>
-                                        <small class="text-white text-uppercase">Jan</small>
-                                    </div>
-                                </div>
-                                <div class="bg-white p-4">
-                                    <div class="d-flex mb-2">
-                                        <a class="text-primary text-uppercase text-decoration-none" href="">Admin</a>
-                                        <span class="text-primary px-2">|</span>
-                                        <a class="text-primary text-uppercase text-decoration-none" href="">Tours & Travel</a>
-                                    </div>
-                                    <a class="h5 m-0 text-decoration-none" href="">Dolor justo sea kasd lorem clita justo diam amet</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-4 pb-2">
-                            <div class="blog-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid w-100" src="{% static '/blog-2.jpg'%}" alt="">
-                                    <div class="blog-date">
+                                    <img class="img-fluid w-100" src="{% static '/assets/img/blog-2.jpg'%}" alt="">
+                                    <div class="assets/img/blog-date">
                                         <h6 class="font-weight-bold mb-n1">01</h6>
                                         <small class="text-white text-uppercase">Jan</small>
                                     </div>
@@ -300,7 +251,7 @@
                 <div class="col-lg-4 mt-5 mt-lg-0">
                     <!-- Author Bio -->
                     <div class="d-flex flex-column text-center bg-white mb-5 py-5 px-4">
-                        <img src="{%static '/user.jpg'%}" class="img-fluid mx-auto mb-3" style="width: 100px;">
+                        <img src="{%static 'assets/img/user.jpg'%}" class="img-fluid mx-auto mb-3" style="width: 100px;">
                         <h3 class="text-primary mb-3">John Doe</h3>
                         <p>Conset elitr erat vero dolor ipsum et diam, eos dolor lorem, ipsum sit no ut est  ipsum erat kasd amet elitr</p>
                         <div class="d-flex justify-content-center">
@@ -373,21 +324,21 @@
                     <div class="mb-5">
                         <h4 class="text-uppercase mb-4" style="letter-spacing: 5px;">Recent Post</h4>
                         <a class="d-flex align-items-center text-decoration-none bg-white mb-3" href="">
-                            <img class="img-fluid" src="{% static '/blog-100x100.jpg'%}" alt="">
+                            <img class="img-fluid" src="{% static '/assets/img/blog-100x100.jpg'%}" alt="">
                             <div class="pl-3">
                                 <h6 class="m-1">Diam lorem dolore justo eirmod lorem dolore</h6>
                                 <small>Jan 01, 2050</small>
                             </div>
                         </a>
                         <a class="d-flex align-items-center text-decoration-none bg-white mb-3" href="">
-                            <img class="img-fluid" src="{% static '/blog-100x100.jpg'%}" alt="">
+                            <img class="img-fluid" src="{% static '/assets/img/blog-100x100.jpg'%}" alt="">
                             <div class="pl-3">
                                 <h6 class="m-1">Diam lorem dolore justo eirmod lorem dolore</h6>
                                 <small>Jan 01, 2050</small>
                             </div>
                         </a>
                         <a class="d-flex align-items-center text-decoration-none bg-white mb-3" href="">
-                            <img class="img-fluid" src="{% static '/blog-100x100.jpg'%}" alt="">
+                            <img class="img-fluid" src="{% static '/assets/img/blog-100x100.jpg'%}" alt="">
                             <div class="pl-3">
                                 <h6 class="m-1">Diam lorem dolore justo eirmod lorem dolore</h6>
                                 <small>Jan 01, 2050</small>
@@ -411,7 +362,7 @@
             </div>
         </div>
     </div>
-    <!-- Blog End -->
+    <!-- assets/img/blog End -->
 
 
     <!-- Footer Start -->
@@ -439,7 +390,7 @@
                     <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Packages</a>
                     <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Guides</a>
                     <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Testimonial</a>
-                    <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Blog</a>
+                    <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>assets/img/blog</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
@@ -451,7 +402,7 @@
                     <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Packages</a>
                     <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Guides</a>
                     <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Testimonial</a>
-                    <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Blog</a>
+                    <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>assets/img/blog</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">

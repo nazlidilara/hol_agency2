@@ -1,0 +1,113 @@
+{% extends 'homebase.html' %}
+{% load static %}
+{% block css_files %} {% endblock %}
+
+{% block js_files %}  {% endblock  %}
+<title>{% block page_title %}Home Page{% endblock  %}</title>
+
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{% static 'images/icons/favicon.ico' %}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+<!--===============================================================================================-->
+{% block content %}
+{% load static %}
+<!--navbar-->
+
+<nav class="navbar navbar-expand-lg navbar-light shadow">
+     <div class="container d-flex justify-content-between align-items-center">
+
+         <a class="navbar-brand text-success logo h1 align-self-center" href="{% url 'home' %}">
+             Register Page
+         </a>
+
+         <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+         </button>
+         {% if not request.user.is_authenticated %}
+         <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+             <div class="flex-fill">
+
+             </div>
+             <div class="navbar align-self-center d-flex">
+                 <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
+                     <div class="input-group">
+                         <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
+                         <div class="input-group-text">
+                             <i class="fa fa-fw fa-search"></i>
+                         </div>
+                     </div>
+                 </div>
+
+
+
+                 {% endif %}
+
+
+
+             </div>
+         </div>
+
+     </div>
+ </nav>
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-pic js-tilt" data-tilt>
+					<img src="{% static 'assets/img/istockphoto-1303860322-612x612.jpg' %}" alt="IMG">
+				</div>
+
+				<form style="width:450px" method="POST" novalidate>
+					{% csrf_token %}
+
+
+
+					{% for error in form.non_field_errors %}
+					    <div class="alert alert-danger">
+						   {{ error }}
+					    </div>
+					{% endfor %}
+
+					{% for field in form %}
+
+					    <div class="mb-3 {% if field.errors %} invalid {% endif %}"><br>
+						   {% if field.errors %}
+							  <div class="alert alert-danger pb-0">
+								 {{ field.errors }}
+							  </div>
+						   {% endif %}
+						   <label  for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label><br>
+						   {{ field }}
+					    </div>
+
+					{% endfor %}
+
+
+					<input type="submit" value="Register" class="btn btn-primary">
+				 </form>
+			</div>
+		</div>
+	</div>
+	{% endblock  %}
+
+
+
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>

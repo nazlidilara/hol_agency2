@@ -22,6 +22,7 @@ from django.contrib import admin
 from django.urls import include, path
 from home import views
 from django.conf.urls.static import static
+from account import urlsaccount
 urlpatterns = [
     path('',include('home.urls')),
     path('home/',include('home.urls')),
@@ -30,9 +31,8 @@ urlpatterns = [
     path('category/<int:id>/<slug:slug>',views.category_products,name='category_products'),
     path('product/<int:id>/<slug:slug>',views.product_detail,name='product_detail'),
     #path('product/addcomment/<int:id>', views.addcomment, name='addcomment')
-    path('login/',views.login_view,name='login_view'),
-    path('logout/',views.logout_view,name='logout_view'),
-    path('user/',include('user.urls')),
+    path('account',include(urlsaccount),name='login_view'),
+
     ]
 
 if settings.DEBUG:

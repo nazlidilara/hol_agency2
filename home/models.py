@@ -97,3 +97,26 @@ class ContactFormMessage(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class HomeSlider(models.Model):
+    title = models.CharField(max_length=200)
+    slug = models.SlugField(max_length=200,default="")
+    subTitle = models.CharField(max_length=200)
+    product_Image = models.ImageField(upload_to="images",null=True)
+    see_on_slider = models.BooleanField(default=False)
+    description = models.TextField()
+    category_of_the_month = models.BooleanField(default=False)
+    price = models.DecimalField(max_digits=10,decimal_places=2,null=True)
+    featured_product = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"{self.title}",
+
+
+class ContactForm(models.Model):
+    name=models.CharField(max_length=100,null=True)
+    eMail=models.CharField(max_length=100,null=True)
+    subject=models.CharField(max_length=200,null=True)
+    message=models.CharField(max_length=1000,null=True)
+

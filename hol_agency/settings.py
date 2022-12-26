@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'user.apps.UserConfig'
+    'account',
 
 ]
 
@@ -131,5 +131,13 @@ BASE_DIR / "static",
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL='/media/'
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
+
+# E MAİL SETTINGS
+
+EMAIL_HOST='smtp.outlook.com'
+EMAIL_PORT='587'
+EMAIL_HOST_USER='dilaraaksoy6@hotmail.com'
+EMAIL_HOST_PASSWORD='dilara149'
+EMAIL_USE_TLS=True
 
 
