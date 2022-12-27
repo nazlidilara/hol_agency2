@@ -1,0 +1,376 @@
+{% extends 'homebase.html' %}
+{% block title %} {{ setting.title }} seyahat acentesi  {% endblock %}
+{% block keywords %} {{ setting.keywords }}  {% endblock %}
+{% block description %} {{ setting.description }}  {% endblock %}
+ {% block head %}
+      <link  rel="icon" type= 'image/x-icon' href='{{ setting.icon.url }}' />
+ {% endblock %}
+{% block css_files %}  {% endblock %}
+{% load static %}
+{%block content%}
+  <div class="container-fluid bg-light pt-3 d-none d-lg-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center">
+                        <p><i class="fa fa-envelope mr-2"></i>dilaraaksoy6@hotmail.com</p>
+                        <p class="text-body px-3">|</p>
+                        <p><i class="fa fa-phone-alt mr-2"></i>0850 633 3 6339</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center text-lg-right">
+                    <div class="d-inline-flex align-items-center">
+                          <a href="{% url 'login_request' %}" class="nav-item nav-link"> Hoşgeldin {{user.username}} </a>
+                        <a href="https://tr-tr.facebook.com/"class="text-primary px-3" href="">
+                            <i  class="fab fa-facebook-f"></i>
+                        </a>
+
+                        <a  href= "https://twitter.com/dilaraaksoy08"class="text-primary px-3" href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href= " https://tr.linkedin.com/"class="text-primary px-3" href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/dilara.akksoy/"class="text-primary px-3" href="">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/results?search_query=holiday"class="text-primary pl-3" href="">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+  <!-- Navbar Start -->
+{% include 'partials/navbar.html' %}
+    <!-- Navbar End -->
+
+<section>
+<div class="container pb-50">
+<div class="row gap-40 justify-content-center">
+<div class="col-12 col-lg-12">
+<div id="accordionStyle04" class="bt-collapse-wrapper as-accordion">
+<div class="collapse-item">
+<div class="collapse-header" id="accordionStyle04-headingOne">
+<h3 class="collapse-title">
+<a class="collapse-link collapsed" data-toggle="collapse" data-target="#accordionStyle04-2" aria-expanded="false" aria-controls="accordionStyle04-2">Nasıl Rezervasyon Yapabilirim</a>
+</h3>
+</div>
+<div id="accordionStyle04-2" class="collapse" aria-labelledby="accordionStyle04-headingOne" data-parent="#accordionStyle04" style="">
+<div class="collapse-body">
+<div class="collapse-inner">
+<p><strong>Online Rezervasyon:</strong>&nbsp;Kiralamak istediğiniz Tatil evinin&nbsp;detayları&nbsp;içersinde yer alan, takvim üzerinde konaklamak istediğiniz tarihleri işaretmenizin ardından açılan formu eksiksiz doldurmanız gerekmektedir. Tüm bilgiler eksiksiz olarak girildikten sonra&nbsp;ödeme sayfasına ilerle butonuna tıklamanız gerekmektedir.</p>
+<p>Yeni açılan sayfada rezervasyon detaylarınız listelenecek kontrol ettikten sonra ödeme şeklinizi seçmeniz gerekecektir.</p>
+<p><strong>Kredi kartı ile ödemeyi tercih etmeniz halinde</strong>&nbsp;Sistemde belirtilen tutarı kredi kartı bilgilerinizi girip onaylamanızın ardından rezervasyon işleminiz tamamlanacak ve tarafınıza rezervasyon onayınız mail olarak gönderilecektir.</p>
+<p><strong>Banka havalesi ile&nbsp; ödemeyi tercih etmeniz halinde</strong>&nbsp;Sistemde belirtilen tutarı belirtilen hesaba en geç iki iş günü içersinde yatırmanız gerekecek ödemeyi yapmanızın ardından rezervasyon işleminiz tamamlanacak rezervasyon onayınız mail olarak gönderilecektir.</p>
+<p>Rezervasyon işleminin gerçekleşmesi itibariyle rezervasyon yaptığınız villanın takviminde rezervasyonunuzun bloke edildiği görecek ve dilediğiniz zaman ana sayfada yer alan Rezervasyon Kontrol bölümünden rezervasyon detaylarınızı görebileceksiniz, artık yapmanız gereken hayalinizdeki tatilin başlamasını beklemek olacaktır.</p>
+<p><strong>Telefon ile Rezervasyon:</strong>&nbsp;Rezervasyon yapmak istediğiniz Tatil Konutunu belirledikten sonra sizden hangi tatil konutu olduğunu öğrenmek için tatil evi kodu yada villanın ismi yetkili personel taradından istenecektir, İstediğiniz tarihlerin rezerve durumu kontrol edildikten sonra size ulaşabileceğimiz ve rezervasyon sahibine ait bilgiler yetkili personelimiz tarafından alınır ve size ödeme yapacağınız hesap bilgileri belirtilir bu işlemlerin sonucunda Ön Rezervasyon işleminiz tamamlanmış olur. Belirtilen hesaba gereken ön ödemenin yapılmasıyla villa belirttiğiniz tarihlerde adınıza bloke edilir ve tarafınıza en geç 24 saat içersinde Rezervasyon Onayı faks yada mail olarak gönderilir.</p>
+<p><strong>Not:</strong>&nbsp;Rezervasyon Onayı Tüm şirket bilgilerinin ve Sizin bilgilerinizin yer aldığı resmi sözleşme olarak geçerlidir. Sözleşme içersinde kiralamış olduğunuz villanın ismi, Hangi tarihler arasında konaklayacağınız, Villa kiralama tutarı ve Yapmış olduğunuz ön ödeme tutarı gibi rezervasyonunuzun detayları belirtilmektedir. Şözleşmenin size gönderileceği mail yada faks resmi olarak şirketimize kayıtlıdır.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="collapse-item">
+<div class="collapse-header" id="accordionStyle04-headingOne">
+<h3 class="collapse-title">
+<a class="collapse-link collapsed" data-toggle="collapse" data-target="#accordionStyle04-1" aria-expanded="false" aria-controls="accordionStyle04-1">Standartlarımız</a>
+</h3>
+</div>
+ <div id="accordionStyle04-1" class="collapse" aria-labelledby="accordionStyle04-headingOne" data-parent="#accordionStyle04" style="">
+<div class="collapse-body">
+<div class="collapse-inner">
+<p>Tüm Villalarımız müstakil özel havuzlu ve bahceli olup tamamen bağımsızdır. Aşagıda belirtilen eşyalar tüm villalarımızda mevcuttur.</p>
+<p><strong>Mutfak:</strong>&nbsp;Buz dolabı, Bulaşık Makinesi, Fırın, Ocak, Su ısıtıcı, En az Konaklayacak Kişi sayısına eşit Yiyecek ve içecek takımı</p>
+<p><strong>Salon:</strong>&nbsp;Televizyon, Uydu alıcı, Vcd oynatıcı, Klima, Oturma gurubu ve sehbası</p>
+<p><strong>Yatak Odası:</strong>&nbsp;Yedek çarşaf ve yastık takımı, Elbise dolabı, Klima</p>
+<p><strong>Diğer:</strong>&nbsp;Çamaşır makinası, Elektrik süpürgesi, Ütü ve masası, Yemek masası ve oturma gurubu, Sac kurutma makinesi, Şenzlog ve şemsiye, Barbekü(mangal)<br>
+Villa Temizlik ve Bakımları</p>
+<p>Tüm Villa ve apartlarımızda havuz ve bahçe bakımı günlük yapılmaktadır. Sabah erken saatlerde bütün işlemler tamamlanmış olup kullanıma hazır hale getirilmektedir.</p>
+<p>Villalarımızda Temizlikler Müşteri giriş ve çıkışları arasındaki süre içersinde yapılmakta olup her villada yedek çarşaf ve yastık kılıfı bulundurulmaktadır. Haftalık kiralamalarda hafta içersinde temizlik ekstra ücrete tabidir fakat Villalarımızda bir haftadan uzun süre kalan müşterilerimiz isterse haftada bir temizlik ücretsiz yapılmaktadır.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="collapse-item">
+<div class="collapse-header" id="accordionStyle04-headingOne">
+<h3 class="collapse-title">
+<a class="collapse-link collapsed" data-toggle="collapse" data-target="#accordionStyle04-3" aria-expanded="false" aria-controls="accordionStyle04-3">Rezervemi Nasıl Görebilirim</a>
+</h3>
+</div>
+<div id="accordionStyle04-3" class="collapse" aria-labelledby="accordionStyle04-headingOne" data-parent="#accordionStyle04" style="">
+<div class="collapse-body">
+<div class="collapse-inner">
+<p><strong>Rezervasyon Onayı:</strong></p>
+<p>Rezervasyon işlemleri yapılıp Kapora alındığı tarihte; Baransel Grup resmi Faks yada Mail yoluyla yazılı olarak tarafınıza gönderilecektir.</p>
+<p>Rezervasyon Onayı İçersinde;</p>
+<p>Rezervasyon yapılan villa adı ve tatil evi kodu, Kimin adına hangi tarih ve saatler arasında rezerve edildiği, Rezerve edilen süre için toplam ödenecek tutarı ve hangi kuruluşa (banka,ptt) ve şubesine hangi tarihte ne kadar ödeme alındığı ve şirketimize ait bilgiler yer almaktadır.</p>
+<p><strong>Kiralama Sürecinde Herhangibir Problem olursa</strong></p>
+<p>Tüm Tatiliniz sürecinde kiraladığınız tatil konutuyla ilgili hertürlü sıkıntı ve şikayetlerinizle 24 saat biz ilgilenmekteyiz, Bize telefonla bilgi vermeniz yeterli olacaktır.</p>
+<p><strong>Tatil Konutumun Yerini nasıl bulacak ve kimden teslim alacagım.</strong></p>
+<p>Tüm tatil konutlarımıza bulunduğu bölgedeki yetkililerimiz tarafından ve villa size tanıtılıp teslim edilmektedir. Tatil konutunun tam olarak yerini tatil konutu detayı bölünde yer alan Google Harita butonuna tıklayarak görebilirsiniz. Kiralamış olduğunuz villanın bulunduğu tatil bölgesine ulaşdığınızda bizi aramanız yada Ofisimize gelmeniz yeterli olacaktır. Yetkili bir personelimiz size eşlik edecek, sizi villanıza ulaştıracak ve gerekli bilgileri size aktardıktan sonra villanızın anahtarını size teslim edecekdir. Artık Unutulmaz bir tatil sizi bekliyor…</p>
+</div>
+</div>
+</div>
+</div>
+<div class="collapse-item">
+<div class="collapse-header" id="accordionStyle04-headingOne">
+<h3 class="collapse-title">
+<a class="collapse-link collapsed" data-toggle="collapse" data-target="#accordionStyle04-4" aria-expanded="false" aria-controls="accordionStyle04-4">Ücrete Neler Dahildir</a>
+</h3>
+</div>
+<div id="accordionStyle04-4" class="collapse" aria-labelledby="accordionStyle04-headingOne" data-parent="#accordionStyle04" style="">
+<div class="collapse-body">
+<div class="collapse-inner">
+<p>Elektrik, su, tüpgaz kullanımı, havuz ve bahçe bakımı ile villaya girişte yapılan temizlik hizmeti ücrete dahildir. Konaklamanız esnasında ekstra temizlik hizmeti talep etmeniz durumunda 1 gün öncesinde firmamıza bilgi vermeniz gerekmektedir. Bu hizmet ücret karşılığinda verilmektedir.</p>
+</div>
+</div>
+</div>
+</div>
+
+<h3 class="collapse-title">
+<a class="collapse-link collapsed" data-toggle="collapse" data-target="#accordionStyle04-6" aria-expanded="false" aria-controls="accordionStyle04-6"> Konaklayacak Kişi Kapasitesi</a>
+</h3>
+</div>
+<div id="accordionStyle04-6" class="collapse" aria-labelledby="accordionStyle04-headingOne" data-parent="#accordionStyle04" style="">
+<div class="collapse-body">
+<div class="collapse-inner">
+<p>Her evin ayrı bir kapasitesi vardır ve bu sayı evimizde konaklayabilecek maksimum kişi sayısını belirtmektedir.&nbsp;Bu konuda ev sahiplerimiz de çok hassas olup kapasite aşımına izin verilmemektedir. Kişi sayısına 5&nbsp;yaşından büyük çocuklar dahil edilmektedir.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="collapse-item">
+<div class="collapse-header" id="accordionStyle04-headingOne">
+<h3 class="collapse-title">
+<a class="collapse-link collapsed" data-toggle="collapse" data-target="#accordionStyle04-8" aria-expanded="false" aria-controls="accordionStyle04-8">Kalkan' a Ulaşım Seçenekleri</a>
+</h3>
+</div>
+<div id="accordionStyle04-8" class="collapse" aria-labelledby="accordionStyle04-headingOne" data-parent="#accordionStyle04" style="">
+<div class="collapse-body">
+<div class="collapse-inner">
+<p><strong>Kalkan' a Mesafeler,</strong></p>
+<p>İstanbul 840 km<br>
+Ankara 640 km<br>
+Antalya 240 km</p>
+<p>Dalaman 140 km<br>
+Fethiye 90 km<br>
+Kaş 30 km</p>
+<p><strong>Karayolu ile ulaşım;</strong><br>
+İstanbul' dan; Bozüyük, Kütahya, Afyon, Burdur, Çavdır, Seydikemer, güzergahını<br>
+Ankara' dan; Afyon, Burdur, Çavdır, Seydikemer güzergahını&nbsp;</p>
+<p>Antalya' dan; Kemer, Kumluca, Finike, Demre ve Kaş güzergahı kullanılmalıdır.</p>
+<p>Türkiye'nin birçok yerinden Kalkan'a otobüs seferi yapılmaktadır. Kalkan otobüslerinin bulunamadığı durumlarda Kaş ve Fethiye otobüsleriyle önce bu merkezlere, ardından minibüslerle Kalkan'a ulaşılabilirsiniz.</p>
+<p><strong>Havayolu ile ulaşım;</strong><br>
+Kalkan' a en yakın havaalanı Muğla Dalaman Havaalanı diğeri ise Antalya Havaalanıdır.</p>
+<p><br>
+<strong>Havaalanından Kalkan'a ulaşım için;</strong><br>
+- Dalaman' dan Havaş ile Fethiye otogara gelir oradan&nbsp;minibüs ile Kalkan otogara ulaşım sağlayabilirsiniz.<br>
+- Özel transfer hizmeti ile direkt villanıza ulaşım sağlayabilirsiniz.</p>
+<p>-Taksi ile ulaşım sağlayabilirsiniz.</p>
+<p>-Özel araç kiralaması yapıp araç ile gelebilirsiniz.</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="collapse-item">
+<div class="collapse-header" id="accordionStyle04-headingOne">
+<h3 class="collapse-title">
+<a class="collapse-link collapsed" data-toggle="collapse" data-target="#accordionStyle04-10" aria-expanded="false" aria-controls="accordionStyle04-10">K.D.V. ve Faturalandirma</a>
+</h3>
+</div>
+<div id="accordionStyle04-10" class="collapse" aria-labelledby="accordionStyle04-headingOne" data-parent="#accordionStyle04" style="">
+<div class="collapse-body">
+<div class="collapse-inner">
+<p>İlan sayfalarında belirtilen fiyatlara KDV dahil değildir. Gayrimenkul gelirleri her yıl sonunda şirketimiz tarafından beyan edilmekte olup tatilcilerimiz işletme konumunda olmadiklari icin fatura kesilememektedir. Bu nedenle KDV dahil degildir ibaresi yer almaktadir. Şirketimiz tüm işlemleri icin aracilik faturasi kesmektedir.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="collapse-item">
+<div class="collapse-header" id="accordionStyle04-headingOne">
+<h3 class="collapse-title">
+<a class="collapse-link collapsed" data-toggle="collapse" data-target="#accordionStyle04-12" aria-expanded="false" aria-controls="accordionStyle04-12">Villalara Erisim</a>
+</h3>
+</div>
+<div id="accordionStyle04-12" class="collapse" aria-labelledby="accordionStyle04-headingOne" data-parent="#accordionStyle04" style="">
+<div class="collapse-body">
+<div class="collapse-inner">
+<p>Şirketimiz diğer firmalardan farklı düzeydeki servis kalitesi ile kiralayan ve kiracı arasında bir komisyoncu vazifesi görmemektedir.</p>
+<p>Kiraladığınız yazlığa erişiminiz için yetkili personelimiz size yazlığınıza kadar eşlik edecek ve yazlığın kullanımı ile alakalı gerekli tanıtım bilgileri sunacaktır.</p>
+<p>Tatil için yola çıktığınızda şirketimizi telefon ile arayarak yol tarifi yada uçakla seyahat edecekler için en yakın havalimanı tarifi alabilirsiniz. yetkilendirilen personelimiz sizi karşılayacak ve yazlığınıza erişiminizi sağlayacaktır.&nbsp;<strong>Villa ve Apartlarda standar giriş saati 15:00 (ögleden sonra), çıkış saati ise 10:00 (gündüz)dır.</strong></p>
+<p>Web sitemize&nbsp;<a href="https://www.tatilvillam.com/iletisim/" target="_blank">iletişim</a>&nbsp;sayfasında yerel ofislerimizin lokasyonları haritada belirtilmiştir. Bu lokasyonlara GPS aracılığı ile de rahatça erişebilirsiniz.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="collapse-item">
+<div class="collapse-header" id="accordionStyle04-headingOne">
+<h3 class="collapse-title">
+<a class="collapse-link collapsed" data-toggle="collapse" data-target="#accordionStyle04-13" aria-expanded="false" aria-controls="accordionStyle04-13">iptal &amp; Iade Şartları</a>
+</h3>
+</div>
+<div id="accordionStyle04-13" class="collapse" aria-labelledby="accordionStyle04-headingOne" data-parent="#accordionStyle04" style="">
+<div class="collapse-body">
+<div class="collapse-inner">
+<p><strong>Rezervasyon İptallerini yazılı olarak e-mail ve/veya faksla belirtmek durumundadır. Bu bildirimin yapılmasının ardından rezerve ettiğiniz tarihler açılır ve satışa sunulur aynı tarihlerin tekrar satılması halinde ödediğiniz tutarı aynı yada farklı bir villada kesintisiz olarak farklı bir tarihte kullanabilirsiniz.&nbsp;</strong></p>
+<p><strong>Rezervasyon iptal şartları aşağıdaki gibidir :</strong></p>
+<ol>
+<li>Rezervasyon tarihine 60 gün ve daha fazla süre kala yapılan iptallerde, toplam kaporanın @ ‘u (% kırk) ;</li>
+<li>Rezervasyon tarihine 60 – 31 gün arası yapılan iptallerde, toplam alınan bedelin ` ı (% atmış) ;</li>
+<li>Rezervasyon tarihine 30 gün ve daha az kala yapılan iptallerde, toplam alınan bedel. Müşteriye geri ödenmeyecektir.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="collapse-item">
+<div class="collapse-header" id="accordionStyle04-headingOne">
+<h3 class="collapse-title">
+<a class="collapse-link collapsed" data-toggle="collapse" data-target="#accordionStyle04-14" aria-expanded="false" aria-controls="accordionStyle04-14">En Az Kiralama Süresi Nedir</a>
+</h3>
+</div>
+<div id="accordionStyle04-14" class="collapse" aria-labelledby="accordionStyle04-headingOne" data-parent="#accordionStyle04" style="">
+<div class="collapse-body">
+<div class="collapse-inner">
+<p>Tatil evleri özelikle yoğun dönemde (Haziran, Temmuz, Ağustos, Eylül) aksi ilan sayfasında belirtilmedikçe en az 7 gece kiralanmaktadır. Fakat bazı kiralık yazlıklarda bu süre daha kısa olabilir. Bununla ilgili özel notlar villa açıklama sayfasında açıkça belirtilmiştir.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="collapse-item">
+<div class="collapse-header" id="accordionStyle04-headingOne">
+<h3 class="collapse-title">
+<a class="collapse-link collapsed" data-toggle="collapse" data-target="#accordionStyle04-15" aria-expanded="false" aria-controls="accordionStyle04-15">Antalya Kiralık Villa Rezervasyonu Nasıl Yapılır?</a>
+</h3>
+</div>
+<div id="accordionStyle04-15" class="collapse" aria-labelledby="accordionStyle04-headingOne" data-parent="#accordionStyle04" style="">
+<div class="collapse-body">
+<div class="collapse-inner">
+<p>Türkiye’nin gözde tatil lokasyonlarından biri olan Antalya, her yıl olduğu gibi bu yılda hafızalardan silinmeyecek tatil anılarının baş kahramanı olmaya devam ediyor. Siz de aileniz ve sevdiklerinizle bu şehrin tadını doyasıya çıkarmak için kiralık villa seçeneklerinden faydalanabilir, eşsiz manzaralarda huzur dolu anlar yaşayabilirsiniz. Tatilinize başlamak istediğiniz tarihi tespit ederek, rezervasyon işlemlerine başlayabilirsiniz. Belirlediğiniz tarih aralıklarında müsait olan villa seçeneklerini ekibimizden öğrenerek ön rezervasyonunuzu gerçekleştirebilir, ardından ilgili tarihte villanıza giriş yapabilmek adına ödeme işlemlerini tamamlayabilirsiniz.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="collapse-item">
+<div class="collapse-header" id="accordionStyle04-headingOne">
+<h3 class="collapse-title">
+<a class="collapse-link collapsed" data-toggle="collapse" data-target="#accordionStyle04-16" aria-expanded="false" aria-controls="accordionStyle04-16"> Kiralama Standartları Nasıldır?</a>
+</h3>
+</div>
+<div id="accordionStyle04-16" class="collapse" aria-labelledby="accordionStyle04-headingOne" data-parent="#accordionStyle04" style="">
+<div class="collapse-body">
+<div class="collapse-inner">
+<p>Antalya sahip olduğu geniş yelpazedeki seçenekleri sayesinde yüksek standartlarda villalarda tatil yapma imkânı sunar. Bu avantajı isteğiniz ve ihtiyaçlarınız doğrultusunda şekillendirerek tatilinizin mükemmel geçmesini sağlayabilirsiniz.</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="collapse-item">
+<div class="collapse-header" id="accordionStyle04-headingOne">
+<h3 class="collapse-title">
+<a class="collapse-link collapsed" data-toggle="collapse" data-target="#accordionStyle04-18" aria-expanded="false" aria-controls="accordionStyle04-18"> Rezervasyon Kişi Sınırı Var Mıdır?</a>
+</h3>
+</div>
+<div id="accordionStyle04-18" class="collapse" aria-labelledby="accordionStyle04-headingOne" data-parent="#accordionStyle04" style="">
+<div class="collapse-body">
+<div class="collapse-inner">
+<p>Villalarda kişi sınırlandırması; tutulacak olan villanın oda sayısı ve alınacak hizmetin kapsamında yer alan pakete göre değişmektedir. Her tatil konutunun maksimum kişi kapasitesi farklılık göstermektedir. Villada kalacak kişi sayısına bebek ve çocuklar da dâhildir. Maksimum kişi kapasitesinin aşılmaması önemle rica olunur. Maksimum kişi sayısının aşılması durumunda yeni bir konutun hizmete açılması gerekecektir.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="collapse-item">
+<div class="collapse-header" id="accordionStyle04-headingOne">
+<h3 class="collapse-title">
+<a class="collapse-link collapsed" data-toggle="collapse" data-target="#accordionStyle04-19" aria-expanded="false" aria-controls="accordionStyle04-19"> Güvenlik Nasıl Sağlanır?</a>
+</h3>
+</div>
+<div id="accordionStyle04-19" class="collapse" aria-labelledby="accordionStyle04-headingOne" data-parent="#accordionStyle04" style="">
+<div class="collapse-body">
+<div class="collapse-inner">
+<p>Antalya kiralık villa seçeneklerinin yer aldığı muhitler özenle seçilmektedir. Özel güvenlik sistemlerinin de bulunduğu bu villalarda maksimum güvenlik sağlanması amaçlanır. Eğer mevcut güvenlik önlemlerine ek olarak ilave etmek istediğiniz seçenekler varsa konuyla ilgili ekibimizle iletişime geçebilirsiniz.&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+        <div class="row pt-5">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href="{% url 'home' %}" class="navbar-brand">
+                    <h1 class="text-primary"><span class="text-white">GEZGIN</span>LER</h1>
+                </a>
+                <p>30 yillik tecrubenin verdigi guvenle...</p>
+                <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Bizi takip edin</h6>
+                <div class="d-flex justify-content-start">
+                    <a href="https://twitter.com/dilaraaksoy08 "class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://tr-tr.facebook.com/ "class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/dilara.akksoy/ " class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Servislerimiz</h5>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white-50 mb-2" href="{% url 'about' %}"><i class="fa fa-angle-right mr-2"></i>Hakkinda</a>
+                    <a class="text-white-50 mb-2" href="{% url 'service' %}"><i class="fa fa-angle-right mr-2"></i>Services</a>
+                    <a class="text-white-50 mb-2" href=" "><i class="fa fa-angle-right mr-2"></i>SIKÇA SORULAN SORULAR</a>
+
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Usefull Links</h5>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white-50 mb-2" href="{% url 'about' %}"><i class="fa fa-angle-right mr-2"></i>Hakkinda</a>
+                    <a class="text-white-50 mb-2" href="{% url 'destination' %}"><i class="fa fa-angle-right mr-2"></i>Hedefler</a>
+                    <a class="text-white-50 mb-2" href="{% url 'service' %}"><i class="fa fa-angle-right mr-2"></i>Services</a>
+                    <a class="text-white-50 mb-2" href=" "><i class="fa fa-angle-right mr-2"></i>Packages</a>
+                    <a class="text-white-50 mb-2" href="{% url 'guide' %}"><i class="fa fa-angle-right mr-2"></i>Seyahat Rehberi</a>
+                    <a class="text-white-50" href="{% url 'blog' %}"><i class="fa fa-angle-right mr-2"></i>Blog</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Iletisim icin</h5>
+                <p><i class="fa fa-map-marker-alt mr-2"></i>1.ring yolu, Sakarya,TURKIYE</p>
+                <p><i class="fa fa-phone-alt mr-2"></i>224 345 67890</p>
+                <p><i class="fa fa-envelope mr-2"></i>dilaraaksoy@hotmail.com</p>
+                <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Newsletter</h6>
+                <div class="w-100">
+                    <div class="input-group">
+                        <input type="text" class="form-control border-light" style="padding: 25px;" placeholder="Your Email">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary px-3">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
+        <div class="row">
+            <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white-50">Copyright &copy; <a href="#">Dilara All Rights Reserved.</a>
+                </p>
+            </div>
+            <div class="col-lg-6 text-center text-md-right">
+                <p class="m-0 text-white-50">Designed by <a href="https://htmlcodex.com">HTML Codex</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+{% endblock %}

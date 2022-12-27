@@ -79,6 +79,8 @@ class Images(models.Model):
     title=models.CharField(max_length=50)
     image=models.ImageField(blank=True,upload_to='images/')
 
+    def __str__(self):
+        return self.title
 
 
 class ContactFormMessage(models.Model):
@@ -119,4 +121,5 @@ class ContactForm(models.Model):
     eMail=models.CharField(max_length=100,null=True)
     subject=models.CharField(max_length=200,null=True)
     message=models.CharField(max_length=1000,null=True)
+
 

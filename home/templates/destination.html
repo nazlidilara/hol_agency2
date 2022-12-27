@@ -21,33 +21,34 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
-    <!-- Topbar Start -->
+   <body>
     <div class="container-fluid bg-light pt-3 d-none d-lg-block">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
                     <div class="d-inline-flex align-items-center">
-                        <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
+                        <p><i class="fa fa-envelope mr-2"></i>dilaraaksoy6@hotmail.com</p>
                         <p class="text-body px-3">|</p>
-                        <p><i class="fa fa-phone-alt mr-2"></i>+012 345 6789</p>
+                        <p><i class="fa fa-phone-alt mr-2"></i>0850 633 3 6339</p>
                     </div>
                 </div>
                 <div class="col-lg-6 text-center text-lg-right">
                     <div class="d-inline-flex align-items-center">
-                        <a class="text-primary px-3" href="">
-                            <i class="fab fa-facebook-f"></i>
+                          <a href="{% url 'login_request' %}" class="nav-item nav-link"> Hoşgeldin {{user.username}} </a>
+                        <a href="https://tr-tr.facebook.com/"class="text-primary px-3" href="">
+                            <i  class="fab fa-facebook-f"></i>
                         </a>
-                        <a class="text-primary px-3" href="">
+
+                        <a  href= "https://twitter.com/dilaraaksoy08"class="text-primary px-3" href="">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a class="text-primary px-3" href="">
+                        <a href= " https://tr.linkedin.com/"class="text-primary px-3" href="">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a class="text-primary px-3" href="">
+                        <a href="https://www.instagram.com/dilara.akksoy/"class="text-primary px-3" href="">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a class="text-primary pl-3" href="">
+                        <a href="https://www.youtube.com/results?search_query=holiday"class="text-primary pl-3" href="">
                             <i class="fab fa-youtube"></i>
                         </a>
                     </div>
@@ -117,7 +118,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="destination-item position-relative overflow-hidden mb-2">
-                        <img class="img-fluid" src="{% static 'assets/img/destination-4.jpg ' %}" alt="">
+                        <img class="img-fluid" src="{% static 'assets/img/destination-6.jpg ' %}" alt="">
                         <a class="destination-overlay text-white text-decoration-none" href="">
                             <h5 class="text-white">India</h5>
                             <span> Cities</span>

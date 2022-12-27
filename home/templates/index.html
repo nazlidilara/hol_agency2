@@ -8,7 +8,7 @@
 {% block css_files %}  {% endblock %}
 {% load static %}
 {%block content%}
-{  <div class="container-fluid bg-light pt-3 d-none d-lg-block">
+  <div class="container-fluid bg-light pt-3 d-none d-lg-block">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
@@ -62,8 +62,8 @@
                   <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h4 class="text-white text-uppercase mb-md-3">Tours & Travel</h4>
-                            <h1 class="display-3 text-white mb-md-4">Let's Discover The World Together</h1>
-                            <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Book Now</a>
+                            <h1 class="display-3 text-white mb-md-4">Hadi,Dunyayi bizimle kesfedin..!</h1>
+                            <a href="{% url 'destination' %}" class="btn btn-primary py-md-3 px-md-5 mt-2">Daha fazlasi</a>
                         </div>
                   </div>
 
@@ -211,7 +211,7 @@
         <div class="container pt-5 pb-3">
             <div class="text-center mb-3 pb-3">
                 <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">kategori</h6>
-                <h1>en cok satanlar</h1>
+                <h1> Cok Satanlar</h1>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4">
@@ -228,7 +228,7 @@
                         <img class="img-fluid" src="{%static 'assets/img/destination-2.jpg'%}" alt="">
                         <a class="destination-overlay text-white text-decoration-none" href="">
                             <h5 class="text-white">United Kingdom</h5>
-                            <span>100 Cities</span>
+                            <span> Cities</span>
                         </a>
                     </div>
                 </div>
@@ -237,7 +237,7 @@
                         <img class="img-fluid" src="{%static 'assets/img/destination-3.jpg'%}" alt="">
                         <a class="destination-overlay text-white text-decoration-none" href="">
                             <h5 class="text-white">Australia</h5>
-                            <span>100 Cities</span>
+                            <span> Cities</span>
                         </a>
                     </div>
                 </div>
@@ -246,7 +246,7 @@
                         <img class="img-fluid" src="{%static 'assets/img/destination-4.jpg'%}" alt="">
                         <a class="destination-overlay text-white text-decoration-none" href="">
                             <h5 class="text-white">India</h5>
-                            <span>100 Cities</span>
+                            <span> Cities</span>
                         </a>
                     </div>
                 </div>
@@ -255,7 +255,7 @@
                         <img class="img-fluid" src="{%static 'assets/img/destination-5.jpg'%}" alt="">
                         <a class="destination-overlay text-white text-decoration-none" href="">
                             <h5 class="text-white">South Africa</h5>
-                            <span>100 Cities</span>
+                            <span> Cities</span>
                         </a>
                     </div>
                 </div>
@@ -264,7 +264,7 @@
                         <img class="img-fluid" src="{%static 'assets/img/destination-6.jpg'%}" alt="">
                         <a class="destination-overlay text-white text-decoration-none" href="">
                             <h5 class="text-white">Indonesia</h5>
-                            <span>100 Cities</span>
+                            <span>Cities</span>
                         </a>
                     </div>
                 </div>
@@ -312,6 +312,11 @@
 
 
     <!-- Packages Start -->
+    {% for product in products %}
+        <h2><a href="{% url 'product_detail' product.id %}">{{ product.name }}</a></h2>
+    <p>{{ product.description }}</p>
+    <p>{{ product.price }}</p>
+{% endfor %}
     <div class="container-fluid py-5">
         <div class="container pt-5 pb-3">
             <div class="text-center mb-3 pb-3">
@@ -328,7 +333,7 @@
                                 <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</small>
                                 <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
                             </div>
-                            <a class="h5 text-decoration-none" href="">romantik ve unutulmaz tatil icin</a>
+                            <a class="h5 text-decoration-none" href="{{ rs.title }}">romantik ve unutulmaz tatil icin</a>
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
@@ -475,8 +480,8 @@
     <div class="container-fluid py-5">
         <div class="container pt-5 pb-3">
             <div class="text-center mb-3 pb-3">
-                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Guides</h6>
-                <h1>Our Travel Guides</h1>
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">rehberler</h6>
+                <h1>Seyahat Rehberlerimiz</h1>
             </div>
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
@@ -491,7 +496,7 @@
                             </div>
                         </div>
                         <div class="text-center py-4">
-                            <h5 class="text-truncate">Guide Name</h5>
+                            <h5 class="text-truncate">Rehber adifor</h5>
                             <p class="m-0">Designation</p>
                         </div>
                     </div>
@@ -508,7 +513,7 @@
                             </div>
                         </div>
                         <div class="text-center py-4">
-                            <h5 class="text-truncate">Guide Name</h5>
+                            <h5 class="text-truncate">Rehber adi</h5>
                             <p class="m-0">Designation</p>
                         </div>
                     </div>
@@ -525,7 +530,7 @@
                             </div>
                         </div>
                         <div class="text-center py-4">
-                            <h5 class="text-truncate">Guide Name</h5>
+                            <h5 class="text-truncate">Rehber adi</h5>
                             <p class="m-0">Designation</p>
                         </div>
                     </div>
@@ -542,7 +547,7 @@
                             </div>
                         </div>
                         <div class="text-center py-4">
-                            <h5 class="text-truncate">Guide Name</h5>
+                            <h5 class="text-truncate"> Rehber adi</h5>
                             <p class="m-0">Designation</p>
                         </div>
                     </div>
@@ -558,42 +563,42 @@
         <div class="container py-5">
             <div class="text-center mb-3 pb-3">
                 <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Testimonial</h6>
-                <h1>What Say Our Clients</h1>
+                <h1>Musterilerimiz ne soyluyor?</h1>
             </div>
             <div class="owl-carousel testimonial-carousel">
                 <div class="text-center pb-4">
                     <img class="img-fluid mx-auto" src="{%static 'assets/img/testimonial-1.jpg'%}" >
                     <div class="testimonial-text bg-white p-4 mt-n5">
-                        <p class="mt-5">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
+                        <p class="mt-5">“ Gayet başarılı,profesyonel bir ekip. 7/24 destek veriliyor ve sabırla sorunlarınız dinleniyor.GEZGIN.com'dan başka firma ile çalışmayız. ”
                         </p>
-                        <h5 class="text-truncate">Client Name</h5>
+                        <h5 class="text-truncate">Furkan Bey</h5>
                         <span>Profession</span>
                     </div>
                 </div>
                 <div class="text-center">
                     <img class="img-fluid mx-auto" src="{%static 'assets/img/testimonial-2.jpg'%}" >
                     <div class="testimonial-text bg-white p-4 mt-n5">
-                        <p class="mt-5">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
+                        <p class="mt-5">“ Merhabalar, Eğer ki gelecekte bir gün bu firma karşınıza çıktığında, siz şöyle bir kullanıcı yorumlarını okuyayım diyebilirsiniz diye ben bu yorumu yazıyorum. 10 numara insanlar, 10 numara hizmet. Teşekkürlerimi sunarım."
                         </p>
-                        <h5 class="text-truncate">Client Name</h5>
+                        <h5 class="text-truncate">Nazli Hanim</h5>
                         <span>Profession</span>
                     </div>
                 </div>
                 <div class="text-center">
                     <img class="img-fluid mx-auto" src="{%static 'assets/img/testimonial-3.jpg'%}" >
                     <div class="testimonial-text bg-white p-4 mt-n5">
-                        <p class="mt-5">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
+                        <p class="mt-5">“ Fiyatlar makul, sürekli sorun çıkaran sunucular yok, beceremediğiniz bir şey olursa ticket atın hemen ilgileniyorlar, arada yilin cogu doneminde indirim de oluyor.
                         </p>
-                        <h5 class="text-truncate">Client Name</h5>
+                        <h5 class="text-truncate">Ali Bey</h5>
                         <span>Profession</span>
                     </div>
                 </div>
                 <div class="text-center">
                     <img class="img-fluid mx-auto" src="{%static 'assets/img/testimonial-4.jpg'%}" >
                     <div class="testimonial-text bg-white p-4 mt-n5">
-                        <p class="mt-5">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
+                        <p class="mt-5">“ Gerçekten Efsane bir hizmet anlayışınız var ben çok memnunum herkese tavsiye ederim. iyiki varsınız . baştacısınız. ”
                         </p>
-                        <h5 class="text-truncate">Client Name</h5>
+                        <h5 class="text-truncate">Vedat Bey</h5>
                         <span>Profession</span>
                     </div>
                 </div>
@@ -692,23 +697,21 @@
             <div class="col-lg-3 col-md-6 mb-5">
                 <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Servislerimiz</h5>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Hakkinda</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Hedefler</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Services</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Packages</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>SIKÇA SORULAN SORULAR</a>
+                    <a class="text-white-50 mb-2" href="{% url 'about' %}"><i class="fa fa-angle-right mr-2"></i>Hakkinda</a>
+                    <a class="text-white-50 mb-2" href="{% url 'service' %}"><i class="fa fa-angle-right mr-2"></i>Services</a>
+                    <a class="text-white-50 mb-2" href="{% url 'sss' %} "><i class="fa fa-angle-right mr-2"></i>SIKÇA SORULAN SORULAR</a>
 
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
                 <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Usefull Links</h5>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Hakkinda</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Hedefler</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Services</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Packages</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Guides</a>
-                    <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Blog</a>
+                    <a class="text-white-50 mb-2" href="{% url 'about' %}"><i class="fa fa-angle-right mr-2"></i>Hakkinda</a>
+                    <a class="text-white-50 mb-2" href="{% url 'destination' %}"><i class="fa fa-angle-right mr-2"></i>Hedefler</a>
+                    <a class="text-white-50 mb-2" href="{% url 'service' %}"><i class="fa fa-angle-right mr-2"></i>Services</a>
+                    <a class="text-white-50 mb-2" href=" "><i class="fa fa-angle-right mr-2"></i>Packages</a>
+                    <a class="text-white-50 mb-2" href="{% url 'guide' %}"><i class="fa fa-angle-right mr-2"></i>Seyahat Rehberi</a>
+                    <a class="text-white-50" href="{% url 'blog' %}"><i class="fa fa-angle-right mr-2"></i>Blog</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">

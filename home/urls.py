@@ -11,5 +11,7 @@ urlpatterns = (
     path('contact/',views.contact,name='contact'),
     path('destination/',views.destination_request,name='destination'),
     path('service/',views.service_request,name='service'),
-
+    path('guide/',views.guide_request,name='guide'),
+    path('sss/',views.sss_request,name='sss'),
+    path('product/<int:product_id>/', views.product_detail, name='product_detail'),
 )

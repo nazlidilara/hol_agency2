@@ -25,7 +25,9 @@ def index_request(request):
                'sliderdata':sliderdata,
                'homeSlider':homeSlider }
     return render(request, 'index.html',context)
-
+def home(request):
+    products = Product.objects.all()
+    return render(request, 'index.html', {'products': products})
 
 def category_products(request, id, slug):
     category = Category.objects.all()
@@ -47,7 +49,7 @@ def product_detail(request, id, slug):
                'selectedProduct': selectedProduct,
                'productImages': productImages,
                'comments': comments}
-    return render(request, 'product_detail.html', context)
+    return render(request, 'product_detail.html', context, {'product': product} )
 
 
 
@@ -92,6 +94,32 @@ def service_request(request):
 
 def register_request(request):
     return render(request,"register.html")
+
+def guide_request(request):
+    return render(request,"guide.html")
+
+def sss_request(request):
+    return render(request,'sss.html')
+
+def category_products(request, id, slug):
+    category = Category.objects.all()
+    selectedCategory = Category.objects.filter(pk=id)
+    product = Product.objects.filter(category_id=id)
+    context = {'selectedCategory': selectedCategory,
+               'products': product,
+               'category':category}
+    return render(request, 'category_products.html', context)
+
+def product_detail(request, id, slug):
+    category = Category.objects.all()
+    selectedProduct = Product.objects.filter(pk=id)
+    productImages = Images.objects.filter(product_id=id)
+    comments = Comment.objects.filter(product_id=id, status='True')
+    context = {'category': category,
+               'selectedProduct': selectedProduct,
+               'productImages': productImages,
+               'comments': comments}
+    return render(request, 'product_detail.html', context)
 
 def contact(request):
     if request.method == 'POST':
